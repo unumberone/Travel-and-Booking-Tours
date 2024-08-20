@@ -1,3 +1,8 @@
+:root {
+  --color-light-orange: lighten(#ffa500, 20%);
+}
+
+
 *{
   font-family: Volkhov;
   padding: 0;
@@ -30,3 +35,19 @@ li{
   font-weight: 500;
   margin-left: -20px;
 }
+
+.header{
+   font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: red;
+}
+
+ .doc{ 
+  font-family: Volkhov;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 64.5px;
+  color: rgba(24, 30, 75, 1);
+ }

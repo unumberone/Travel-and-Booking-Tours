@@ -1,5 +1,8 @@
 import React from "react";
 import "./nav.scss";
+import { Link } from "react-router-dom"; // Import Link từ react-router-dom
+
+
 
 const Nav = () => {
   return (
@@ -35,27 +38,27 @@ const Nav = () => {
         <div className="menu">
           <ul className="list">
             <li className="Item">
-              <a href="" className="link">
+            <Link to="/" className="link"> {/* Sử dụng Link thay cho thẻ <a> */}
                 Home
-              </a>
+              </Link>
             </li>
 
             <li className="Item">
-              <a href="" className="link">
+              <Link to="/about" className="link"> {/* Sử dụng Link với đường dẫn đến /about */}
                 About
-              </a>
+              </Link>
             </li>
 
             <li className="Item">
-              <a href="" className="link">
+              <Link to="/services" className="link"> {/* Sử dụng Link với đường dẫn đến /services */}
                 Service
-              </a>
+              </Link>
             </li>
 
             <li className="Item">
-              <a href="" className="link">
-                Upcomming Packages
-              </a>
+              <Link to="/upcoming-packages" className="link"> {/* Sử dụng Link với đường dẫn đến /upcoming-packages */}
+                Upcoming Packages
+              </Link>
             </li>
           </ul>
         </div>
@@ -64,19 +67,19 @@ const Nav = () => {
       <div className="context">
       <h2 className="text">
         No matter where you’re going to, we’ll take you there
-        <div class="search-bar">
-        <input type="text" placeholder="Where to?" class="input-field" />
-        <select class="input-field">
+        <div className="search-bar">
+        <input type="text" placeholder="Where to?" className="input-field" />
+        <select className="input-field">
           <option value="" color="red">Travel Type</option>
           <option value="business">Business</option>
           <option value="leisure">Leisure</option>
         </select>
-        <select class="input-field">
+        <select className="input-field">
           <option value="">Duration</option>
           <option value="short">Short (1-3 days)</option>
           <option value="long">Long (4+ days)</option>
         </select>
-        <button class="submit-btn">Submit</button>
+        <button className="submit-btn">Submit</button>
       </div>
       </h2>
       </div>

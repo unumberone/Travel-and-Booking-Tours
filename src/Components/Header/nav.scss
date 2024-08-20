@@ -72,10 +72,11 @@
 .btn{
     font-family: Circular Std;
     font-size: 17px;
-    font-weight: 300;
+    font-weight: 700;
     line-height: 20px;
     text-align: center;
     color: rgba(255, 255, 255, 1);
+    background-color: red;
 }
 
 .context{
@@ -133,7 +134,9 @@
   }
 
   .submit-btn {
-    background-color: #f76c6c;
+    font-family: Poppins;
+    font-weight: 600;
+    background-color: #f60707;
     border: none;
     color: white;
     padding: 10px 20px;
