@@ -10,8 +10,89 @@ import u5 from "../../../Assets/u5.png";
 import u6 from "../../../Assets/u6.png";
 
 const Upcomming = () => {
+  const TourDay = ({ day, title, description, items }) => {
+  return (
+    <div className="tour-day">
+      <h3>Day {day}: {title}</h3>
+      <p>{description}</p>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
   const [activeSection, setActiveSection] = useState("info");
-  const { days } = useState();
+  
+
+  const tourPlan = [
+    {
+      id: 1,
+      day: 1,
+      title: "Departure",
+      description:
+        "Quae tempore voluptate Qui Quam Commodi Baen Possimus Alias",
+      items: [
+        "5 Star Accommodation",
+        "Breakfast",
+        "Lunch Accommodation",
+        "Breakfast",
+      ],
+    },
+    {
+      id: 2,
+      day: 2,
+      title: "Visiting Zurich, Geneva And Zermatt",
+      description:
+        "Docer Ducim Felix Voluptas Nec Perspiciatis Eu, Praesentium Quae Sem, Nobis Consequatur Nescia Cum Erum Doctor Poido Luptus Et Minima Vel Dignissimos Lic.",
+      items: [
+        "5 Star Accommodation",
+        "Breakfast",
+        "Lunch Accommodation",
+        "Breakfast",
+      ],
+    },
+    {
+      id: 3,
+      day: 3,
+      title: "Rest",
+      description:
+        "Docer Ducim Felix Voluptas Nec Perspiciatis Eu, Praesentium Quae Sem, Nobis Consequatur Nescia Cum Erum Doctor Poido Luptus Et Minima Vel Dignissimos Lic.",
+      items: [
+        "5 Star Accommodation",
+        "Breakfast",
+        "Lunch Accommodation",
+        "Breakfast",
+      ],
+    },
+    {
+      id: 4,
+      day: 4,
+      title: "Historical Tour",
+      description:
+        "Docer Ducim Felix Voluptas Nec Perspiciatis Eu, Praesentium Quae Sem, Nobis Consequatur Nescia Cum Erum Doctor Poido Luptus Et Minima Vel Dignissimos Lic.",
+      items: [
+        "5 Star Accommodation",
+        "Breakfast",
+        "Lunch Accommodation",
+        "Breakfast",
+      ],
+    },
+    {
+      id: 5,
+      day: 5,
+      title: "Return",
+      description:
+        "Consequat Magno Quam Erum, Docer Poido Luptus, Eligendi Nec, Voluptates Atque, Alio In Erum Nulla, Assumenda Impedit A Voluptatibus Vitae.",
+      items: [
+        "5 Star Accommodation",
+        "Breakfast",
+        "Lunch Accommodation",
+        "Breakfast",
+      ],
+    },
+  ];
 
   const handleSectionClick = (section) => (event) => {
     event.preventDefault(); // Ngăn hành vi mặc định của liên kết
@@ -139,96 +220,97 @@ const Upcomming = () => {
         {/*phần tour plan */}
 
         {activeSection === "tour-plan" && (
-          <div className="tour-info">
-            <h2 style={{
-                  fontFamily: "Volkhov",
-                  fontSize: "40px",
-                  fontWeight: "600",
-                  lineHeight: "64.5px",
-                  color: "rgba(24, 30, 75, 1)",
-                }}>Tour Plan</h2>
-            <ol>
-              <li>
-                <strong>Day 1:</strong> Departure
-              </li>
-              <li>
-                <strong>Day 2:</strong> Visiting Zurich, Geneva and Zermatt
-              </li>
-              <li>
-                <strong>Day 3:</strong> Rest
-              </li>
-              <li>
-                <strong>Day 4:</strong> Historical Tour
-              </li>
-              <li>
-                <strong>Day 5:</strong> Return
-              </li>
-            </ol>
-            <p>(Nội dung chi tiết từ ảnh 2)</p>
+          <div className="tour-plan">
+            <h2>Tour Plan</h2>
+            <div className="tour-info">
+              {tourPlan.length > 0 ? (
+                tourPlan.map((tourDay) => (
+                  <TourDay
+                    key={tourDay.id}
+                    day={tourDay.day}
+                    title={tourDay.title}
+                    description={tourDay.description}
+                    items={tourDay.items}
+                  />
+                ))
+              ) : (
+                <div>Không có dữ liệu kế hoạch tour</div>
+              )}
+            </div>
           </div>
         )}
-
+        {/*location*/}
         {activeSection === "location" && (
           <div className="tour-info">
             <div className="loca">
-            <h2 className="doc" style={{
+              <h2
+                className="doc"
+                style={{
                   fontFamily: "Volkhov",
                   fontSize: "40px",
                   fontWeight: "600",
                   lineHeight: "64.5px",
                   color: "rgba(24, 30, 75, 1)",
-                }}>Location</h2>
-            <b className="explain">
-              Qui tempore voluptate qui quia commodi rem praesentium alias et
-              voluptates officia sed molestiae sint et voluptas quos. Qui harum
-              repudiandae galisum dolorem Hic deleniti officiis est sapiente
-              explicabo non eaque corporis aut voluptatum iusto At facere enim
-              id voluptas reprehenderit. Ut voluptas laudantium
-            </b>
-            <div className="map-container">
-              <iframe
-                title="Map"
-               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.852692539617!2d105.84249131523268!3d21.028511586092075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab0d7d6bce7b%3A0x9290bb2e6b63e024!2zVHJpbmggVGnDqyDEkOG7lCBTa2kgTmdh!5e0!3m2!1sen!2s!4v1624982720815"
-                width="100%"
-                height="650"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+                }}
+              >
+                Location
+              </h2>
+              <b className="explain">
+                Qui tempore voluptate qui quia commodi rem praesentium alias et
+                voluptates officia sed molestiae sint et voluptas quos. Qui
+                harum repudiandae galisum dolorem Hic deleniti officiis est
+                sapiente explicabo non eaque corporis aut voluptatum iusto At
+                facere enim id voluptas reprehenderit. Ut voluptas laudantium
+              </b>
+              <div className="map-container">
+                <iframe
+                  title="Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.852692539617!2d105.84249131523268!3d21.028511586092075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab0d7d6bce7b%3A0x9290bb2e6b63e024!2zVHJpbmggVGnDqyDEkOG7lCBTa2kgTmdh!5e0!3m2!1sen!2s!4v1624982720815"
+                  width="100%"
+                  height="650"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <b className="explain">
+                Sit quasi soluta non temporibus voluptas non necessitatibus
+                tempore sit deleniti praesentium aut velit nostrum ut itaque
+                atque ad expedita veniam. Hic deleniti officiis est sapiente
+                explicabo non eaque corporis aut voluptatum iusto At facere enim
+                id voluptas reprehenderit. Ut voluptas laudantium et molestias
+                voluptatem ex doloremque omnis est ipsum nihil. <br></br>
+                <br></br>
+                Quo facere eveniet 33 sint rerum est internos impedit sed
+                dignissimos quia. Et rerum deleniti et voluptates saepe qui
+                labore quisquam non accusantium temporibus. Quo velit numquam
+                hic excepturi sequi sed dicta doloribus! In quos possimus quo
+                quibusdam aliquid est culpa porro sed molestiae libero At
+                blanditiis minima a reiciendis fugiat.
+              </b>
             </div>
-            <b className="explain">
-              Sit quasi soluta non temporibus voluptas non necessitatibus
-              tempore sit deleniti praesentium aut velit nostrum ut itaque atque
-              ad expedita veniam. Hic deleniti officiis est sapiente explicabo
-              non eaque corporis aut voluptatum iusto At facere enim id voluptas
-              reprehenderit. Ut voluptas laudantium et molestias voluptatem ex
-              doloremque omnis est ipsum nihil. <br></br><br></br>
-               Quo facere eveniet 33 sint rerum
-              est internos impedit sed dignissimos quia. Et rerum deleniti et
-              voluptates saepe qui labore quisquam non accusantium temporibus.
-              Quo velit numquam hic excepturi sequi sed dicta doloribus! In quos
-              possimus quo quibusdam aliquid est culpa porro sed molestiae
-              libero At blanditiis minima a reiciendis fugiat.
-            </b>
-          </div>
           </div>
         )}
-
+        {/*phần gallery*/}
         {activeSection === "gallery" && (
           <div className="tour-gallery">
-            <h2 style={{
-                  fontFamily: "Volkhov",
-                  fontSize: "40px",
-                  fontWeight: "600",
-                  lineHeight: "64.5px",
-                  color: "rgba(24, 30, 75, 1)",
-                }}>Tour Gallery</h2>
+            <h2
+              style={{
+                fontFamily: "Volkhov",
+                fontSize: "40px",
+                fontWeight: "600",
+                lineHeight: "64.5px",
+                color: "rgba(24, 30, 75, 1)",
+              }}
+            >
+              Tour Gallery
+            </h2>
             <div className="gallery-images">
-              <p style={{color:'red'}}>COMING SOON...</p>
+              <p style={{ color: "red" }}>COMING SOON...</p>
             </div>
           </div>
         )}
-
+        {/**form booking */}
         <div className="booking-form">
           <h3>Book This Tour</h3>
           <form onSubmit={handleFormSubmit}>
