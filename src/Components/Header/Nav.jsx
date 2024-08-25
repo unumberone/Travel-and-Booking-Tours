@@ -1,12 +1,18 @@
-import React from "react";
-import "./nav.scss";
-import { Link } from "react-router-dom"; // Import Link từ react-router-dom
-
-
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './nav.scss';
 
 const Nav = () => {
+  const location = useLocation();
+
+  // Kiểm tra URL hiện tại
+  const isHome = location.pathname === '/';
+  const isAbout = location.pathname === '/about';
+  const isServices = location.pathname === '/services';
+  const isUpcomming = location.pathname === '/upcomming';
+
   return (
-    <div className="container">
+    <div className={`container ${isHome ? 'home-bg' : isAbout ? 'about-bg' : isServices ? 'services-bg' : isUpcomming ? 'upcoming-bg' : ''}`}>
       <section className="Nav">
         <div className="section">
           <h1>Travel</h1>
@@ -38,25 +44,25 @@ const Nav = () => {
         <div className="menu">
           <ul className="list">
             <li className="Item">
-            <Link to="/" className="link"> {/* Sử dụng Link thay cho thẻ <a> */}
+              <Link to="/" className="link">
                 Home
               </Link>
             </li>
 
             <li className="Item">
-              <Link to="/about" className="link"> {/* Sử dụng Link với đường dẫn đến /about */}
+              <Link to="/about" className="link">
                 About
               </Link>
             </li>
 
             <li className="Item">
-              <Link to="/services" className="link"> {/* Sử dụng Link với đường dẫn đến /services */}
-                Service
+              <Link to="/services" className="link">
+                Services
               </Link>
             </li>
 
             <li className="Item">
-              <Link to="/upcoming-packages" className="link"> {/* Sử dụng Link với đường dẫn đến /upcoming-packages */}
+              <Link to="/upcomming" className="link">
                 Upcoming Packages
               </Link>
             </li>
@@ -64,29 +70,52 @@ const Nav = () => {
         </div>
         <button className="btn">Get in Touch</button>
       </section>
-      <div className="context">
-      <h2 className="text">
-        No matter where you’re going to, we’ll take you there
-        <div className="search-bar">
-        <input type="text" placeholder="Where to?" className="input-field" />
-        <select className="input-field">
-          <option value="" color="red">Travel Type</option>
-          <option value="business">Business</option>
-          <option value="leisure">Leisure</option>
-        </select>
-        <select className="input-field">
-          <option value="">Duration</option>
-          <option value="short">Short (1-3 days)</option>
-          <option value="long">Long (4+ days)</option>
-        </select>
-        <button className="submit-btn">Submit</button>
-      </div>
-      </h2>
-      </div>
-      
+
+      {/* Logic xử lý mỗi mục của navbar có một tên h2 riêng */}
+      {isHome && (
+        <div className="context">
+          <h2 className="text">
+            No matter where <br />
+            you’re going to, <br />
+            we’ll take you there
+          </h2>
+          <div className="search-bar">
+            <input type="text" placeholder="Where to?" className="input-field" />
+            <select className="input-field">
+              <option value="">Travel Type</option>
+              <option value="business">Business</option>
+              <option value="leisure">Leisure</option>
+            </select>
+            <select className="input-field">
+              <option value="">Duration</option>
+              <option value="short">Short (1-3 days)</option>
+              <option value="long">Long (4+ days)</option>
+            </select>
+            <button className="submit-btn">Submit</button>
+          </div>
+        </div>
+      )}
+
+      {isAbout && (
+        <div className="about">
+          <h2 className='About'>About Us</h2>
+        </div>
+      )}
+
+      {isServices && (
+        <div className="services">
+          <h2 className='Services'>Travel With Us</h2>
+        </div>
+      )}
+
+      {isUpcomming && (
+        <div className="upcomming">
+          <h2 className='Upcomming'>Landscapes</h2>
+        </div>
+      )}
+
     </div>
-    
   );
 };
-export default Nav;
 
+export default Nav;

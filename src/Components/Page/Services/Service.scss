@@ -1,0 +1,175 @@
+.tour-listing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.tour-listing-header {
+  background-color: #f1f1f1;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tour-listing-header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tour-listing-header nav ul li {
+  display: inline;
+}
+
+.tour-listing-header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.tour-listing-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tour-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 65%; /* Chiều rộng 65% cho danh sách các tour */
+}
+
+.tour-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tour-card.active {
+  border: 2px solid #3498db;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tour-info {
+  padding: 20px;
+}
+
+.tour-info p {
+  margin: 5px 0;
+}
+
+.tour-info .date, .tour-info .people {
+  font-size: 12px;
+  color: #888;
+}
+
+.tour-info h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.tour-info p {
+  font-size: 16px;
+  color: #e74c3c;
+}
+
+.rating {
+  background-color: #f1c40f;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.tour-plan {
+  width: 30%; /* Chiều rộng 30% cho form bên phải */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 20px; /* Khoảng cách giữa form và danh sách tour */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tour-plan h3 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.tour-plan form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.tour-plan input, .tour-plan select, .tour-plan textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+.filter-by-price {
+  margin-bottom: 15px;
+}
+
+.filter-by-price label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.filter-by-price input[type=range] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination ul {
+  list-style: none;
+  display: inline-flex;
+  padding: 0;
+}
+
+.pagination ul li {
+  margin: 0 5px;
+}
+
+.pagination ul li a {
+  text-decoration: none;
+  color: #3498db;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination ul li a:hover {
+  background-color: #3498db;
+  color: #fff;
+}

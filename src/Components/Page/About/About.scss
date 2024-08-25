@@ -1,0 +1,207 @@
+.about {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.promotioncontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+    margin: 100px;
+    gap: 1rem;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.Promotion {
+    flex: 1;
+    max-width: 500px;
+    max-height: 1100px;
+}
+
+.explaining {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Volkhov;
+    color: grey;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 10rem;
+}
+
+
+.proImgage {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.image1,
+.image2,
+.image3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 200px;
+}
+
+.image1 {
+    z-index: 2;
+    transform: scale(1.5);
+}
+
+.image2 {
+    z-index: 1;
+    transform: scale(1.7);
+}
+
+.image3 {
+    z-index: 0;
+    transform: scale(1.6);
+}
+
+.sig {
+    .pr {
+        position: absolute;
+        text-align: center;
+        z-index: 100;
+        color: white;
+        font-family: Yesteryear;
+        font-size: 150px;
+        font-weight: 400;
+        line-height: 400px;
+        left: 600px;
+    }
+
+    .Sig {
+        width: 100%;
+        height: 400px;
+        display: block;
+    }
+}
+
+.trending {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1;
+    
+  }
+  
+  .imgTrend {
+    position: relative;
+    width: 20%;
+  }
+  
+  .trend1 {
+    width: 80%;
+    margin-left: 1400px;
+  }
+  
+  .trend2 {
+    position: relative;
+    width: 700px;
+    height: 700px;
+  }
+  
+  .percent {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .percentage {
+    text-align: center;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .blue {
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  }
+  
+  .pink {
+    background: linear-gradient(135deg, #f77062 0%, #fe5196 100%);
+  }
+  
+  .purple {
+    background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+  }
+  
+  .label {
+    font-size: 24px;
+    color: #7f8c8d;
+    text-transform: uppercase;
+  }
+
+  .Explore {
+    padding: 40px 20px;
+    text-align: center;
+    
+}
+
+.picExp {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tạo lưới với 4 cột */
+    gap: 20px; /* Khoảng cách giữa các ô ảnh */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pic {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.picE p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1;
+    color: rgb(187, 187, 187);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1;
+}

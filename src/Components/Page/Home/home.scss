@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap; 
-    width: 1600px; 
+    width: 1200px; 
     margin: 10px auto; 
     padding: 0 60px;
     margin-bottom: 100px;
@@ -75,8 +75,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
-    max-width: 1200px;
+    padding: 4rem;
+    max-width: 1600px;
     margin: auto;
     position: relative;
     background-color: #ffffff;
@@ -85,7 +85,7 @@
       flex: 1;
       margin-bottom: 250px;
       max-width: 600px;
-      max-height: 1200px;
+      max-height: 1100px;
   
       .explain {
         font-family: Poppins, sans-serif;
@@ -101,17 +101,17 @@
         display: flex;
         gap: 1rem;
         position: absolute;
-       bottom: 80px;
+        bottom: 80px;
         left: 250px;
         z-index: 2;
       
         .popular {
           position: relative;  // Đảm bảo mỗi thẻ .popular có position riêng
-          width: 150px;
+          width: 200px;
           overflow: hidden;
           @include border-radius(1rem);
           @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.1));
-          transition: transform 0.5s ease-out;
+          transition: transform 0.1s ease-in-out;
       
           &:hover {
             transform: scale(1.05);
@@ -144,6 +144,7 @@
       max-width: 350px;
       position: relative;
       z-index: 1;
+      left: -20px;
       @include top-border-radius(3rem);
   
       img {

@@ -1,0 +1,151 @@
+
+  //css toàn bộ upcomming
+  .tour-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  //css phần nav
+  .tour-header {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    margin-bottom: 40px;
+  }
+  
+  .tour-header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+  }
+  
+
+  .tour-header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  //css cho phần nội dung chính
+  //information
+  .tour-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .Rating{
+    padding: 2px 6px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: rgba(24, 30, 75, 1);
+  }
+  
+  .tour-info {
+    width: 60%;
+  }
+  
+  .description{
+    color: black;
+    margin: 10px;
+  }
+
+  strong{
+    color: red;
+  }
+
+  .tour-meta {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tour-meta li {
+    margin-bottom: 40px;
+  }
+  
+  .booking-form {
+    width: 35%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .booking-form h3 {
+    margin-top: 0;
+  }
+  
+  .booking-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-form input, .booking-form select, .booking-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    background-color: #ff1900;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .qc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .imgU {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .imgU img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ 
+  .btn:hover {
+    background-color: #c0392b;
+  }
+
+  //css cho phần location
+  .loca{
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .explain{
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+
+  .tour-gallery {
+    margin-top: 40px;
+  }
+  
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-images img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
